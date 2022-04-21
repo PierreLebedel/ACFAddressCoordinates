@@ -224,12 +224,13 @@ class pleb_acf_field_address_coordinates extends acf_field
 									<li>
 										<div class="acf-input-wrap">
 											<?php $countries = $this->get_countries_list();
+											$country_code = (!is_null($field['value']) && isset($field['value']['country_code'])) ? mb_strtoupper($field['value']['country_code']) : '';
 											//echo '<pre>'.print_r( $countries, true ).'</pre>'; ?>
 
 											<select id="<?php echo esc_attr($field['key']) ?>_country_code" name="<?php echo esc_attr($field['name']) ?>[country_code]" <?php if($required) echo 'required'; ?>>
 												<option value="">-- <?php _e("Choose country", 'pleb'); ?> --</option>
 												<?php foreach($countries as $k=>$v): ?>
-												<option value="<?php echo $k; ?>" <?php if(mb_strtoupper($field['value']['country_code'])==$k) echo 'selected'; ?>><?php echo $v; ?></option>
+												<option value="<?php echo $k; ?>" <?php if($country_code==$k) echo 'selected'; ?>><?php echo $v; ?></option>
 												<?php endforeach; ?>
 											</select></div>
 										</div>

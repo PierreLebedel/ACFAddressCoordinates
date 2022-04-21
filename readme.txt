@@ -27,6 +27,9 @@ This ACF field type is compatible with:
 
 == Changelog ==
 
+= 1.1.1 =
+* Fix countries list notice on post create form
+
 = 1.1.0 =
 * Replace rinvex/countries package by countriesnow.space api
 

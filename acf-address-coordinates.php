@@ -4,7 +4,7 @@
 Plugin Name: Advanced Custom Fields: Address with Coordinates 
 Plugin URI: 
 Description: Address fields with coordinates geocoding
-Version: 1.1.0
+Version: 1.1.1
 Author: Pierre Lebedel
 Author URI: https://www.pierrelebedel.fr
 License: MIT

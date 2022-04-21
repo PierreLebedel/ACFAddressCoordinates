@@ -223,13 +223,13 @@ class pleb_acf_field_address_coordinates extends acf_field
 									</li>
 									<li>
 										<div class="acf-input-wrap">
-											<?php $countries = \Rinvex\Country\CountryLoader::countries(false, true);
+											<?php $countries = $this->get_countries_list();
 											//echo '<pre>'.print_r( $countries, true ).'</pre>'; ?>
 
 											<select id="<?php echo esc_attr($field['key']) ?>_country_code" name="<?php echo esc_attr($field['name']) ?>[country_code]" <?php if($required) echo 'required'; ?>>
 												<option value="">-- <?php _e("Choose country", 'pleb'); ?> --</option>
-												<?php foreach($countries as $country): ?>
-												<option value="<?php echo $country->getIsoAlpha2(); ?>" <?php if(mb_strtoupper($field['value']['country_code'])==$country->getIsoAlpha2()) echo 'selected'; ?>><?php echo $country->getNativeName(); ?></option>
+												<?php foreach($countries as $k=>$v): ?>
+												<option value="<?php echo $k; ?>" <?php if(mb_strtoupper($field['value']['country_code'])==$k) echo 'selected'; ?>><?php echo $v; ?></option>
 												<?php endforeach; ?>
 											</select></div>
 										</div>
@@ -287,6 +287,55 @@ class pleb_acf_field_address_coordinates extends acf_field
 		</table><?php
 	}
 	
+
+	/**
+	 * Get associative array of countries code & name
+	 *
+	 * @return array
+	 */
+	private function get_countries_list()
+	{
+		$transient_key = 'acfaddcoord_countries';
+		$transient_value = get_transient($transient_key);
+
+		if( $transient_value){
+
+			return $transient_value;
+
+		}else{
+
+			$countries = [];
+
+			$url = 'https://countriesnow.space/api/v0.1/countries/iso';
+
+			$WP_Http = new WP_Http();
+			$httpquery = $WP_Http->get($url, []);
+	
+			if( !is_wp_error($httpquery) && isset($httpquery['body']) ){
+	
+				$results = json_decode($httpquery['body']);
+	
+				if (json_last_error() === JSON_ERROR_NONE) {
+	
+					if(isset($results->data) && is_array($results->data) && !empty($results->data)){
+						foreach($results->data as $country){
+							$countries[ $country->Iso2 ] = $country->name;
+						}
+
+						set_transient($transient_key, $countries, DAY_IN_SECONDS);
+
+					}
+	
+				}
+	
+			}
+	
+			return $countries;
+
+		}
+
+		
+	}
 		
 	/*
 	*  input_admin_enqueue_scripts()
@@ -606,18 +655,17 @@ class pleb_acf_field_address_coordinates extends acf_field
 
 	private function get_country_name( $value )
 	{
-		$country_name = null;
-
 		if( isset($value['country_code']) && !empty($value['country_code']) ){
-			$country = \Rinvex\Country\CountryLoader::country($value['country_code']);
-			if($country){
-				//echo '<pre>'.print_r( $country, true ).'</pre>';die;
-				$country_name = $country->getNativeName();
 
+			$countries = $this->get_countries_list();
+
+			if( array_key_exists($value['country_code'], $countries) ){
+				return $countries[ $value['country_code'] ];
 			}
+
 		}
 		
-		return $country_name;
+		return null;
 	}
 	
 	

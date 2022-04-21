@@ -16,8 +16,6 @@ Domain Path: /lang
 // exit if accessed directly
 if( ! defined( 'ABSPATH' ) ) exit;
 
-require 'vendor/autoload.php';
-
 // check if class already exists
 if( !class_exists('pleb_acf_plugin_address_coordinates') ) :
 

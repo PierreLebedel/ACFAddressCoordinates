@@ -1,0 +1,19 @@
+
+
+.acf-address-coordinates .acf-hl[data-cols="2_4-8"] > li:first-child {
+    width: 33%;
+}
+.acf-address-coordinates .acf-hl[data-cols="2_4-8"] > li:last-child {
+    width: 67%;
+}
+
+.acf-address-coordinates.acf-fields.-left > .acf-field > .acf-label{
+    width:30%;
+}
+.acf-address-coordinates.acf-fields.-left > .acf-field::before{
+    width:30%;
+}
+
+.acf-address-coordinates.acf-fields.-left > .acf-field > .acf-input{
+    width:70%;
+}

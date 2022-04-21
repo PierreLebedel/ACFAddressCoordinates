@@ -1,0 +1,82 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Advanced Custom Fields: Address with Coordinates\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-04-21 07:53+0000\n"
+"PO-Revision-Date: 2022-04-21 08:52+0000\n"
+"Last-Translator: \n"
+"Language-Team: Français\n"
+"Language: fr_FR\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.6.1; wp-5.9.3\n"
+"X-Domain: pleb"
+
+#. Description of the plugin
+msgid "Address fields with coordinates geocoding"
+msgstr "Adresse avec coordonnées GPS calculées"
+
+#: fields/class-pleb-acf-field-address-coordinates-v5.php:40
+msgid "Address with Coordinates "
+msgstr "Adresse avec coordonnées"
+
+#. Name of the plugin
+msgid "Advanced Custom Fields: Address with Coordinates"
+msgstr "Advanced Custom Fields : Adresse avec coordonnées"
+
+#: fields/class-pleb-acf-field-address-coordinates-v5.php:223
+msgid "Choose country"
+msgstr "Sélectionnez le pays"
+
+#: fields/class-pleb-acf-field-address-coordinates-v5.php:178
+#: fields/class-pleb-acf-field-address-coordinates-v5.php:190
+msgid "City"
+msgstr "Ville"
+
+#: fields/class-pleb-acf-field-address-coordinates-v5.php:207
+msgid "Country"
+msgstr "Pays"
+
+#: fields/class-pleb-acf-field-address-coordinates-v5.php:247
+msgid "Geocoded on save"
+msgstr "Calculées àl'enregistrement"
+
+#: fields/class-pleb-acf-field-address-coordinates-v5.php:245
+msgid "GPS Coordinates"
+msgstr "Coordonnées GPS"
+
+#: fields/class-pleb-acf-field-address-coordinates-v5.php:258
+msgid ""
+"GPS coordinates could not be geocoded. Please check address fields validity."
+msgstr ""
+"Les coordonnées GPS n'ont pas pu être calculées. Veuillez vérifier la "
+"validité des champs d'adresse."
+
+#: fields/class-pleb-acf-field-address-coordinates-v5.php:178
+#| msgid "Post code"
+msgid "Postal code"
+msgstr "Code postal"
+
+#: fields/class-pleb-acf-field-address-coordinates-v5.php:207
+msgid "State"
+msgstr "État"
+
+#: fields/class-pleb-acf-field-address-coordinates-v5.php:214
+msgid "State / Province"
+msgstr "État / Province"
+
+#: fields/class-pleb-acf-field-address-coordinates-v5.php:155
+#: fields/class-pleb-acf-field-address-coordinates-v5.php:160
+msgid "Street address"
+msgstr "Adresse"
+
+#: fields/class-pleb-acf-field-address-coordinates-v5.php:163
+msgid "Street address (additional)"
+msgstr "Adresse (complément)"
+
+#: fields/class-pleb-acf-field-address-coordinates-v5.php:185
+msgid "ZIP / Postal code"
+msgstr "Code postal"

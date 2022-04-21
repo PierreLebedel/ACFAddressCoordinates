@@ -159,12 +159,12 @@ class pleb_acf_field_address_coordinates extends acf_field
 						<div class="acf-field acf-field-text">
 							<div class="acf-label">
 								<label for="<?php echo esc_attr($field['key']) ?>_street_1">
-									<?php _e("Street address", 'pleb'); ?><?php if($required): ?><span class="acf-required">*</span><?php endif; ?>
+									<?php _e("Street address", 'pleb'); ?>
 								</label>
 							</div>
 							<div class="acf-input">
 								<div class="acf-input-wrap" style="margin-bottom:10px;">
-									<input type="text" id="<?php echo esc_attr($field['key']) ?>_street_1" name="<?php echo esc_attr($field['name']) ?>[street_1]" value="<?php echo esc_attr($field['value']['street_1'] ?? '') ?>" <?php if($required) echo 'required'; ?> placeholder="<?php esc_attr_e('Street address', 'pleb'); ?>">
+									<input type="text" id="<?php echo esc_attr($field['key']) ?>_street_1" name="<?php echo esc_attr($field['name']) ?>[street_1]" value="<?php echo esc_attr($field['value']['street_1'] ?? '') ?>" placeholder="<?php esc_attr_e('Street address', 'pleb'); ?>">
 								</div>
 								<div class="acf-input-wrap">
 									<input type="text" id="<?php echo esc_attr($field['key']) ?>_street_2" name="<?php echo esc_attr($field['name']) ?>[street_2]" value="<?php echo esc_attr($field['value']['street_2'] ?? '') ?>" placeholder="<?php esc_attr_e('Street address (additional)', 'pleb'); ?>">

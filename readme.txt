@@ -27,5 +27,8 @@ This ACF field type is compatible with:
 
 == Changelog ==
 
+= 1.1.0 =
+* Replace rinvex/countries package by countriesnow.space api
+
 = 1.0.0 =
 * Initial Release.

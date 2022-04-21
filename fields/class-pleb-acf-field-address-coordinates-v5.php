@@ -53,7 +53,7 @@ class pleb_acf_field_address_coordinates extends acf_field
 		*/
 		
 		$this->defaults = array(
-			//'display_country' => false
+			'default_country_code' => ''
 		);
 		
 		
@@ -106,17 +106,20 @@ class pleb_acf_field_address_coordinates extends acf_field
 		*  Please note that you must also have a matching $defaults value for the field name (font_size)
 		*/
 
-		/*
+		$countries = $this->get_countries_list();
+
 		
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Display country','pleb'),
-			'instructions'	=> __('Display country name on template','pleb'),
-			'type'			=> 'true_false',
-			'name'			=> 'display_country',
-			'ui'			=> 1,
+			'label'         => __('Default country', 'pleb'),
+			'instructions'  => __('Prefill country field', 'pleb'),
+			'type'          => 'select',
+			'name'          => 'default_country_code',
+			'choices'       => array_merge(
+				['' => '-- '.__('None', 'pleb').' --'], 
+				$countries
+			),
+			'ui'            => false, // ui=true dont show option with empty value
 		));
-
-		*/
 
 	}
 	
@@ -223,8 +226,9 @@ class pleb_acf_field_address_coordinates extends acf_field
 									</li>
 									<li>
 										<div class="acf-input-wrap">
-											<?php $countries = $this->get_countries_list();
-											$country_code = (!is_null($field['value']) && isset($field['value']['country_code'])) ? mb_strtoupper($field['value']['country_code']) : '';
+											<?php 
+											$countries = $this->get_countries_list();
+											$country_code = (!is_null($field['value']) && isset($field['value']['country_code'])) ? mb_strtoupper($field['value']['country_code']) : $field['default_country_code'];
 											//echo '<pre>'.print_r( $countries, true ).'</pre>'; ?>
 
 											<select id="<?php echo esc_attr($field['key']) ?>_country_code" name="<?php echo esc_attr($field['name']) ?>[country_code]" <?php if($required) echo 'required'; ?>>

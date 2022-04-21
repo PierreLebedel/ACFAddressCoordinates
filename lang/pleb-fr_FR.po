@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Advanced Custom Fields: Address with Coordinates\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-04-21 07:53+0000\n"
-"PO-Revision-Date: 2022-04-21 08:52+0000\n"
+"PO-Revision-Date: 2022-04-21 10:54+0000\n"
 "Last-Translator: \n"
 "Language-Team: Français\n"
 "Language: fr_FR\n"
@@ -19,7 +19,7 @@ msgstr ""
 msgid "Address fields with coordinates geocoding"
 msgstr "Adresse avec coordonnées GPS calculées"
 
-#: fields/class-pleb-acf-field-address-coordinates-v5.php:40
+#: fields/class-pleb-acf-field-address-coordinates-v5.php:41
 msgid "Address with Coordinates "
 msgstr "Adresse avec coordonnées"
 
@@ -27,56 +27,68 @@ msgstr "Adresse avec coordonnées"
 msgid "Advanced Custom Fields: Address with Coordinates"
 msgstr "Advanced Custom Fields : Adresse avec coordonnées"
 
-#: fields/class-pleb-acf-field-address-coordinates-v5.php:223
+#: fields/class-pleb-acf-field-address-coordinates-v5.php:235
 msgid "Choose country"
 msgstr "Sélectionnez le pays"
 
-#: fields/class-pleb-acf-field-address-coordinates-v5.php:178
-#: fields/class-pleb-acf-field-address-coordinates-v5.php:190
+#: fields/class-pleb-acf-field-address-coordinates-v5.php:188
+#: fields/class-pleb-acf-field-address-coordinates-v5.php:200
 msgid "City"
 msgstr "Ville"
 
-#: fields/class-pleb-acf-field-address-coordinates-v5.php:207
+#: fields/class-pleb-acf-field-address-coordinates-v5.php:217
 msgid "Country"
 msgstr "Pays"
 
-#: fields/class-pleb-acf-field-address-coordinates-v5.php:247
+#: fields/class-pleb-acf-field-address-coordinates-v5.php:113
+msgid "Default country"
+msgstr "Pays par défaut"
+
+#: fields/class-pleb-acf-field-address-coordinates-v5.php:259
 msgid "Geocoded on save"
 msgstr "Calculées àl'enregistrement"
 
-#: fields/class-pleb-acf-field-address-coordinates-v5.php:245
+#: fields/class-pleb-acf-field-address-coordinates-v5.php:257
 msgid "GPS Coordinates"
 msgstr "Coordonnées GPS"
 
-#: fields/class-pleb-acf-field-address-coordinates-v5.php:258
+#: fields/class-pleb-acf-field-address-coordinates-v5.php:270
 msgid ""
 "GPS coordinates could not be geocoded. Please check address fields validity."
 msgstr ""
 "Les coordonnées GPS n'ont pas pu être calculées. Veuillez vérifier la "
 "validité des champs d'adresse."
 
-#: fields/class-pleb-acf-field-address-coordinates-v5.php:178
+#: fields/class-pleb-acf-field-address-coordinates-v5.php:118
+msgid "None"
+msgstr "Aucun"
+
+#: fields/class-pleb-acf-field-address-coordinates-v5.php:188
 #| msgid "Post code"
 msgid "Postal code"
 msgstr "Code postal"
 
-#: fields/class-pleb-acf-field-address-coordinates-v5.php:207
+#: fields/class-pleb-acf-field-address-coordinates-v5.php:114
+msgid "Prefill country field"
+msgstr "Pays pré-sélectionné"
+
+#: fields/class-pleb-acf-field-address-coordinates-v5.php:217
 msgid "State"
 msgstr "État"
 
-#: fields/class-pleb-acf-field-address-coordinates-v5.php:214
+#: fields/class-pleb-acf-field-address-coordinates-v5.php:224
 msgid "State / Province"
 msgstr "État / Province"
 
-#: fields/class-pleb-acf-field-address-coordinates-v5.php:155
-#: fields/class-pleb-acf-field-address-coordinates-v5.php:160
+#: fields/class-pleb-acf-field-address-coordinates-v5.php:165
+#: fields/class-pleb-acf-field-address-coordinates-v5.php:170
 msgid "Street address"
 msgstr "Adresse"
 
-#: fields/class-pleb-acf-field-address-coordinates-v5.php:163
+#: fields/class-pleb-acf-field-address-coordinates-v5.php:173
 msgid "Street address (additional)"
 msgstr "Adresse (complément)"
 
-#: fields/class-pleb-acf-field-address-coordinates-v5.php:185
+#: fields/class-pleb-acf-field-address-coordinates-v5.php:195
 msgid "ZIP / Postal code"
 msgstr "Code postal"

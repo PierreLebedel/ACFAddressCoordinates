@@ -27,6 +27,9 @@ This ACF field type is compatible with:
 
 == Changelog ==
 
+= 1.2.0 =
+* Default country on field options
+
 = 1.1.1 =
 * Fix countries list notice on post create form
 

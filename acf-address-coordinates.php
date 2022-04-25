@@ -4,7 +4,7 @@
 Plugin Name: Advanced Custom Fields: Address with Coordinates 
 Plugin URI: 
 Description: Address fields with coordinates geocoding
-Version: 1.2.0
+Version: 1.2.1
 Author: Pierre Lebedel
 Author URI: https://www.pierrelebedel.fr
 License: MIT
@@ -43,7 +43,7 @@ class pleb_acf_plugin_address_coordinates {
 		// settings
 		// - these will be passed into the field class.
 		$this->settings = array(
-			'version'	=> '1.2.0',
+			'version'	=> '1.2.1',
 			'url'		=> plugin_dir_url( __FILE__ ),
 			'path'		=> plugin_dir_path( __FILE__ )
 		);

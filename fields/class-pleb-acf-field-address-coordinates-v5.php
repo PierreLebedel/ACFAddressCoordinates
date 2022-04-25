@@ -634,8 +634,8 @@ class pleb_acf_field_address_coordinates extends acf_field
 								)
 								*/
 
-								$coords['longitude'] = $result->lat;
-								$coords['latitude'] = $result->lon;
+								$coords['latitude'] = $result->lat;
+								$coords['longitude'] = $result->lon;
 
 								set_transient($transient_key, $coords);
 

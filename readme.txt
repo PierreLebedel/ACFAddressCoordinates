@@ -27,6 +27,9 @@ This ACF field type is compatible with:
 
 == Changelog ==
 
+= 1.2.1 =
+* Fix latitude & longitude reversion
+
 = 1.2.0 =
 * Default country on field options
 
